@@ -82,8 +82,10 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
+
 					<configuration>
 						<skipTests>true</skipTests>
+
 					</configuration>
 				</plugin>
 				<plugin>
@@ -96,6 +98,7 @@
 								<artifactId>lombok</artifactId>
 							</exclude>
 						</excludes>
+
 					</configuration>
 				</plugin>
 				<plugin>
@@ -136,10 +139,24 @@
 				<configuration>
 					<source>11</source>
 					<target>11</target>
+
+				</configuration>
+
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<mainClass>com.bichri.Client_Mgr</mainClass>
+						</manifest>
+					</archive>
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>clientmgr</finalName>
+<!--		<finalName>clientmgr</finalName>-->
 	</build>
 
 </project>
