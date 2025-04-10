@@ -139,7 +139,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
-
+		<finalName>clientmgr</finalName>
 	</build>
 
 </project>
